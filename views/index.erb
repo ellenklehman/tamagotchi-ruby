@@ -1,0 +1,11 @@
+<h1>Welcome to Tamagotchi</h1>
+
+<h3>To start the game, please enter a name for your pet:</h3>
+
+<%= erb(:error, :locals => { :object => @pet }) %>
+
+<form action="/pets" method="post">
+  <label for="name">Name:</label>
+  <input id="name" type="text" name="name">
+  <button type ="submit">Go</button>
+</form>

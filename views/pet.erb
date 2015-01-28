@@ -1,0 +1,24 @@
+<h1><%= @pet.name() %></h1>
+
+<h2>OVERALL HAPPINESS SCORE</h2>
+<h4><%= @pet.happiness() %></h4>
+
+<form action="/check" method="post">
+  <input type="hidden" name="id" value="<%= @pet.id %>">
+  <button name="check" type="submit">Check on your pet</button>
+</form>
+
+<form action="/feed" method="post">
+  <input type="hidden" name="id" value="<%= @pet.id %>">
+  <button name="feed" type="submit">Feed your pet</button>
+</form>
+
+<form action="/play" method="post">
+  <input type="hidden" name="id" value="<%= @pet.id %>">
+  <button name="play" type="submit">Play with your pet</button>
+</form>
+
+<form action="/sleep" method="post">
+  <input type="hidden" name="id" value="<%= @pet.id %>">
+  <button name="sleep" type="submit">Let your pet sleep</button>
+</form>
